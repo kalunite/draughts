@@ -498,6 +498,7 @@ function gamePlay() {
     };
 };
 
+// ! executed here
 p1.pieces.forEach(p => {
     turnReg(p1, p);
 });
