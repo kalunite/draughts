@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Draughts</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="shortcut icon" href="draughts-logo.ico">
+</head>
+
+<body>
+    <div class="white-panel mobile">
+        <div class="score">
+            <progress value="3000" max="3000" class="white-progress mobile"></progress>
+        </div>
+        <img src="img/king-white.png" class="white-logo">
+    </div>
+    <div class="container">
+        <div class="left-panel">
+            <div class="title">
+                <h1><ins>Draughts</ins></h1>
+            </div>
+            <div class="black-panel">
+                <img src="img/king-black.png" class="black-logo">
+                <div class="score"></div>
+                <progress value="3000" max="3000" class="black-progress"></progress>
+            </div>
+        </div>
+        <div class="game-board">
+            <!-- from board.js -->
+        </div>
+        <div class="right-panel">
+            <div class="white-panel">
+                <progress value="3000" max="3000" class="white-progress"></progress>
+                <div class="score"></div>
+                <img src="img/king-white.png" class="white-logo">
+            </div>
+            <div class="game-help">
+                <a href=""><img src="img/restart-button.png" href="" class="restart-button"></a>
+                <img src="img/switch-button.png" class="switch-button">
+                <span class="help">?</span>
+            </div>
+        </div>
+    </div>
+    <div class="black-panel mobile">
+        <img src="img/king-black.png" class="black-logo">
+        <div class="score">
+            <progress value="3000" max="3000" class="black-progress mobile"></progress>
+        </div>
+    </div>
+
+    <script src="js/sweetalert2.all.js"></script>
+    <script src="js/board.js"></script>
+    <script src="js/button.js"></script>
+    <script src="js/script.js"></script>
+</body>
+
+</html>
