@@ -2,14 +2,13 @@ const gameBoard = document.querySelector(`.game-board`);
 
 function setPieces(kind, index) {
     document.querySelectorAll(`.row-${index} .active`).forEach(area => {
-        let newPiece = document.createElement(`img`);
-        newPiece.setAttribute(`src`, `img/men-${kind}.png`);
+        let newPiece = document.createElement(`div`);
+        newPiece.style.backgroundImage = `url(img/men-${kind}.png)`;
+        newPiece.style.backgroundSize = `contain`;
+        newPiece.style.margin = `auto`;
         newPiece.setAttribute(`draggable`, `false`);
-        if (kind == `black`) {
-            newPiece.classList.add(`${kind}-piece`);
-        } else if (kind == `white`) {
-            newPiece.classList.add(`${kind}-piece`);
-        }
+        newPiece.classList.add(`piece-board`);
+        newPiece.classList.add(`${kind}-piece`);
         area.appendChild(newPiece);
     });
 };

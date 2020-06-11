@@ -225,7 +225,7 @@ function checkingMoveBlock(player, enemy) {
         }
     });
     checkArr = checkArr.reduce((pv, cv) => pv + cv);
-    if (checkArr == 0 && enemy.score[0].childElementCount == 12 || enemy.score[1].childElementCount == 12) {
+    if (checkArr == 0 && enemy.score.filter(s => !s.classList.contains(`mobile`))[0].childElementCount == 12) {
         return gameEnd(enemy.kind, `${enemy.name} MENANG !!!`, `Keping ${player.name} telah habis`);
     } else if (checkArr == 0) {
         return gameEnd(enemy.kind, `${enemy.name} MENANG !!!`, `Gerakan ${player.name} telah terblokir`);
@@ -475,7 +475,7 @@ function checkingPieceTransform(player) {
     player.crownHeads.forEach(l => {
         player.pieces.forEach(p => {
             if (l == p.parentNode && !p.classList.contains(`king`)) {
-                p.setAttribute(`src`, `img/king-${player.kind}.png`);
+                p.style.backgroundImage = `url(img/king-${player.kind}.png)`;
                 return p.classList.add(`king`);
             };
         });
