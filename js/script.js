@@ -528,6 +528,11 @@ if (
     navigator.msMaxTouchPoints > 0
 ) {
     convertTouch();
+    Swal.fire({
+        title: `Maaf !!!`,
+        icon: `warning`,
+        text: `Game ini belum mendukung layar sentuh :(`,
+    });
 };
 p1.pieces.forEach(p => {
     turnReg(p1, p);
